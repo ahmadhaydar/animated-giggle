@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-base-200;
+}
+
+/* Set up the scroll container */
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  @apply max-w-7xl
+}
+
+/* Set up the content to be scrollable */
+.content {
+  display: flex;
+  animation: scroll infinite linear 15s; /* Adjust the animation duration to control the scrolling speed */
+}
+
+.content2 {
+  display: flex;
+  animation: scroll2 infinite linear 15s; /* Adjust the animation duration to control the scrolling speed */
+}
+
+/* Define the animation for scrolling */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%); /* Adjust this percentage based on your content width */
+  }
+}
+
+@keyframes scroll2 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0); /* Adjust this percentage based on your content width */
+  }
+}
+
